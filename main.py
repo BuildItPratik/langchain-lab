@@ -23,7 +23,7 @@ class AgentResponse(BaseModel):
 
 
 
-# llm = ChatOpenAI
+# llm = ChatOpenAI()
 llm = ChatOllama(model="qwen3:8b")
 tools = [TavilySearch()]
 agent = create_agent(model=llm,tools=tools,response_format=AgentResponse)
